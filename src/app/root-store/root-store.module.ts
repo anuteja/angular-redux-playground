@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductStoreModule } from './product-store/product-store.module';
-import { Widget2StoreModule } from './widget2-store/widget2-store.module';
+import { CampaignStoreModule } from './campaign-store/campaign-store.module';
 import { EffectsModule } from '@ngrx/effects';
 import {StoreModule} from '@ngrx/store';
 import {environment} from 'src/environments/environment';
@@ -12,7 +12,7 @@ import {StoreDevtoolsModule} from '@ngrx/store-devtools';
   imports: [
     CommonModule,
     ProductStoreModule,
-    Widget2StoreModule,
+    CampaignStoreModule,
     EffectsModule.forRoot([]),
     StoreModule.forRoot({}),
     StoreDevtoolsModule.instrument({
