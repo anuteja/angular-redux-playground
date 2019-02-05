@@ -14,7 +14,7 @@ export const selectAllProducts: (
 ) => Product[] = productAdapter.getSelectors(selectProductState).selectAll;
 
 export const selectByProductId = (id: number) =>
-  createSelector(this.selectAllProducts, (allProducts: Product[]) => {
+  createSelector(selectAllProducts, (allProducts: Product[]) => {
     if (allProducts) {
       return allProducts.find(p => p.id === id);
     } else {
