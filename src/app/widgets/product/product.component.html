@@ -1,6 +1,7 @@
 <div>
   <div *ngIf="isLoading$ | async">I am loading....</div>
   <div>
-    <div *ngFor="let product of products$ | async">{{product.name}}</div>
+    <div *ngFor="let product of products$ | async" (click)="getProductData(product);">{{product.name}}</div>
+    <div *ngIf="slectedProduct$">{{slectedProduct$ | json }}</div>
   </div>
 </div>

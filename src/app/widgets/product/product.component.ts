@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from 'rxjs';
 import {Product} from '../../root-store/product-store/product.model';
-import {Store} from '@ngrx/store';
+import {Store, select} from '@ngrx/store';
 import {ProductSelectors, ProductStoreActions, RootStoreState} from '../../root-store';
 
 @Component({
@@ -14,6 +14,7 @@ export class ProductComponent implements OnInit {
   products$: Observable<Product[]>;
   error$: Observable<string>;
   isLoading$: Observable<boolean>;
+  slectedProduct$;
 
   constructor(private store$: Store<RootStoreState.RootState>) {
   }
@@ -25,6 +26,10 @@ export class ProductComponent implements OnInit {
     this.store$.dispatch(
       new ProductStoreActions.GetAllProductsRequestAction()
     );
+  }
+
+  getProductData(product) {
+    this.store$.select(ProductSelectors.selectByProductId(product.id)).subscribe((data: Product) => this.slectedProduct$ = data);
   }
 
 }

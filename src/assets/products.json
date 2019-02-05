@@ -1,16 +1,16 @@
 {
-    "products": [
-        {
-            "id": 1,
-            "name": "Display",
-            "friendlyName": "Display",
-            "icon": "https://img.com"
-        },
-        {
-            "id": 2,
-            "name": "PreRoll",
-            "friendlyName": "Pre Roll",
-            "icon": "https://img.com"
-        }
-    ]
+	"products": [
+		{
+			"id": 1,
+			"name": "Display",
+			"friendlyName": "Display",
+			"icon": "https://img.com"
+		},
+		{
+			"id": 2,
+			"name": "PreRoll",
+			"friendlyName": "Pre Roll",
+			"icon": "https://img.com"
+		}
+	]
 }
