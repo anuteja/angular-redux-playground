@@ -1,3 +1,6 @@
 <div>
-  <div *ngIf="isLoading$">I am loading....</div>
+  <div *ngIf="isLoading$ | async">I am loading....</div>
+  <div>
+    <div *ngFor="let product of products$ | async">{{product.name}}</div>
+  </div>
 </div>

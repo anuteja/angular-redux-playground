@@ -22,7 +22,6 @@ export class ProductComponent implements OnInit {
     this.products$ = this.store$.select(ProductSelectors.selectAllProducts);
     this.error$ = this.store$.select(ProductSelectors.selectProductError);
     this.isLoading$ = this.store$.select(ProductSelectors.selectProductIsLoading);
-
     this.store$.dispatch(
       new ProductStoreActions.GetAllProductsRequestAction()
     );
